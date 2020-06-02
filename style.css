@@ -285,12 +285,12 @@ p:hover{
 }
 
 .showplayeraction{
-    animation: showplayer 1s ease forwards !important;
+    animation: showplayer 1.5s ease forwards !important;
     display:block !important;
 }
 
 .hideplayeraction{
-    animation: hideplayer 0.5s ease forwards !important;
+    animation: hideplayer 1s ease forwards !important;
     display:hidden !important;
 }
 
