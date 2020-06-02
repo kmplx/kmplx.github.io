@@ -267,6 +267,11 @@ p:hover{
     color:var(--accent);
 }
 
+.pforplay{
+    background: var(--accent) !important;
+    color:var(--black) !important;
+}
+
 .player{
     position:fixed;
     /* display:none; */
@@ -280,8 +285,13 @@ p:hover{
 }
 
 .showplayeraction{
-    animation: showplayer 2s ease forwards !important;
+    animation: showplayer 1s ease forwards !important;
     display:block !important;
+}
+
+.hideplayeraction{
+    animation: hideplayer 0.5s ease forwards !important;
+    display:hidden !important;
 }
 
 .overflowhide{
@@ -305,6 +315,18 @@ p:hover{
       
 }
 
+@keyframes hideplayer{
+
+    0% {
+        top: 67px;
+    }
+    100%{
+        top: -100vh;
+    }
+  
+  
+}
+
 @media only screen and (max-width: 600px) {}
 
 
@@ -326,6 +348,10 @@ p:hover{
 
     p{
         font-size:7pt;
+    }
+
+    p{
+        width:150px;
     }
 }
 

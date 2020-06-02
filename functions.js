@@ -22,16 +22,41 @@ $(document).ready(function(){
 
     $("#btnPlayer").click(function(){
         
-            $(".player").toggleClass('showplayeraction');
+            // $(".player").toggleClass('showplayeraction');
+            // $.when(fetchPlayerStatus()).then(resetPlayerStatus);
+
+            fetchPlayerStatus();
+            
+          
+            
+
             $("html,body").toggleClass('overflowhide');
             
-            $("p").toggleClass('activep');
+            $("p").toggleClass('pforplay');
 
             if(!($(".header").hasClass('activeheader'))){
                 $(".header").addClass('activeheader');
             };
         
     });
+
+
+    function fetchPlayerStatus(){
+        if( !($(".player").hasClass('showplayeraction')) &&  !($(".player").hasClass('hideplayeraction'))    ){
+            $(".player").addClass('showplayeraction');
+            console.log("show");
+        }else if( $(".player").hasClass('showplayeraction')  &&  !($(".player").hasClass('hideplayeraction'))){
+            console.log("hide");
+            $(".player").addClass('hideplayeraction');
+        }else if($(".player").hasClass('showplayeraction hideplayeraction')){
+            console.log("hitting");
+            $(".player").removeClass('hideplayeraction');
+        }
+    };
+
+
+    // function resetPlayerStatus(){
+    // }
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
