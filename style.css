@@ -14,6 +14,21 @@ body{
     padding:0;
 }
 
+a{
+    color:var(--light) !important;
+    outline:none !important;
+    transition:all ease-in-out 0.3s;
+}
+
+a:focus{
+    color:var(--accent) !important;
+}
+
+a:hover{
+    color:var(--accent) !important;
+    transition:all ease-in-out 0.3s;
+}
+
 
 .row{
     margin-right:0 !important;
@@ -53,28 +68,31 @@ body{
 }
 
 .cta{
-    margin-top:50px;
-    width:fit-content;
+    margin-top:10px;
+    /* width:200px; */
     height:fit-content;
-    padding:10px;
-    border-bottom:2px solid var(--accent);
+    padding:15px;
     color:var(--accent);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     font-size:10pt !important;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
 }
 
 .cta:hover{
     cursor: pointer;
-    border-bottom:2px solid var(--accent);
+    border-bottom:2px solid var(--accent) !important;
     color:var(--black);
-    background:var(--accent);
+    background:var(--accent) !important;
     -webkit-box-shadow: 0px 10px 26px -8px rgba(212,212,212,0.08);
     -moz-box-shadow: 0px 10px 26px -8px rgba(212,212,212,0.08);
     box-shadow: 0px 10px 26px -8px rgba(212,212,212,0.08);
     transition: all ease-in-out 0.5s;
+}
+
+#btnAbout{
+    text-align:center;
 }
 
 .landingshadow{
@@ -93,10 +111,26 @@ body{
 }
 
 #btnLetsTalk{
-    position: absolute;
+    /* position: absolute;
     left:50%;
-    transform:translateX(-50%);
-    /* text-align: center; */
+    transform:translateX(-50%); */
+    text-align: center;
+}
+
+.btnplacement{
+    width:100%;
+    text-align: center;
+}
+
+button{
+    background: transparent !important;
+    border:none !important;
+    border-bottom:2px solid var(--accent) !important;
+}
+
+button:focus{
+    /* border:none !important; */
+    outline:none;
 }
 
 .myvideo{
@@ -134,10 +168,56 @@ body{
 }
 
 .show{
-    /* visibility: initial !important;
-    
-    transition:all ease-in-out 2s; */
     display:block;
+}
+
+.contactmesection{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+
+}
+
+h5{
+    color:var(--light);
+    font-family: 'Roboto', sans-serif;
+    font-weight:200;
+    /* text-align:center; */
+}
+
+.separator{
+    /* position: relative; */
+    width:100px;
+    height:2px;
+    /* left:50%; */
+
+}
+
+.sociallinks{
+    color:var(--light);
+    position: relative;
+    left:50%;
+    transform:translateX(-50%);
+    transition:all ease-in-out 0.5s;
+}
+
+.sociallinks:hover{
+    /* cursor: pointer !important; */
+}
+
+.sociallinks div{
+     margin-top:15px;
+    font-size: 20pt;
+    display: inline-block;
+    padding:20px;
+}
+
+.sociallinks div:hover{
+    color:var(--accent);
+    cursor: pointer !important;
+    transition:all ease-in-out 0.3s;
 }
 
 
@@ -155,6 +235,10 @@ body{
 @media only screen and (max-width: 992px) {
     .title{
         font-size:30pt;
+    }
+
+    .sociallinks div{
+        padding:10px;
     }
 }
 

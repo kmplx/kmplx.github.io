@@ -8,6 +8,12 @@ $(document).ready(function(){
         }, 1500);
     });
 
+    $("#btnLetsTalk").click(function(){
+        $("html,body").animate({
+            scrollTop: $("#Contact").offset().top
+        }, 1500);
+    });
+
     $(".toTop").click(function(){
         $("html,body").animate({
             scrollTop: $("html, body").offset().top
