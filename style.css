@@ -349,6 +349,11 @@ p:hover{
     p{
         width:150px;
     }
+
+    .landing{
+        background: url(assets/imgs/landing-mobile.png) center center no-repeat !important;
+        background-size:cover !important;
+    }
 }
 
 
