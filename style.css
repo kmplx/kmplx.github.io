@@ -221,6 +221,7 @@ p:hover{
     transition:color ease-in-out 0.3s;
 }
 
+
 .activep{
     border-bottom: 2px solid var(--accent);
     cursor: pointer;
@@ -355,6 +356,11 @@ p:hover{
     #ifmyvideo{
         width: 80vw !important;
          height: 40vh !important;
+    }
+
+    p:hover{
+        border-bottom: none !important;
+        color:var(--grey) !important;
     }
 }
 
