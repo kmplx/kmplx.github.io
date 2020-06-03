@@ -36,6 +36,17 @@ a:hover{
     margin-left:0 !important;
 }
 
+button{
+    background: transparent !important;
+    border:none !important;
+    border-bottom:2px solid var(--accent) !important;
+}
+
+button:focus{
+    outline:none;
+}
+
+
 .header{
     width:100%;
     position:fixed;
@@ -111,13 +122,6 @@ a:hover{
     text-align:center;
 }
 
-.landingshadow{
-    position: absolute;
-    bottom:0;
-    width:100%;
-    height:100px;
-}
-
 .aboutmesection{
     position: absolute;
     top:50%;
@@ -135,16 +139,6 @@ a:hover{
     text-align: center;
 }
 
-button{
-    background: transparent !important;
-    border:none !important;
-    border-bottom:2px solid var(--accent) !important;
-}
-
-button:focus{
-    outline:none;
-}
-
 .myvideo{
     width:80vw;
     height:fit-content;
@@ -155,26 +149,7 @@ button:focus{
      height: 70vh !important;
 }
 
-.toTop{
-    position: fixed;
-    bottom:20px;
-    right:20px;
-    padding:15px 18px 15px 18px;
-    background: var(--light);
-    color: var(--black);
-    text-align: center;
-    transition:all ease-in-out 1s;
-    opacity:0.1;
-    display:none;
-}
 
-.toTop:hover{
-    background: var(--accent);
-    color: var(--black);
-    opacity:1;
-    transition:all ease-in-out 1s;
-    cursor: pointer;
-}
 
 .show{
     display:block !important;
@@ -299,6 +274,28 @@ p:hover{
     height:65vh !important;
 }
 
+
+.toTop{
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    padding:15px 18px 15px 18px;
+    background: var(--light);
+    color: var(--black);
+    text-align: center;
+    transition:all ease-in-out 1s;
+    opacity:0.1;
+    display:none;
+}
+
+.toTop:hover{
+    background: var(--accent);
+    color: var(--black);
+    opacity:1;
+    transition:all ease-in-out 1s;
+    cursor: pointer;
+}
+
 @keyframes showplayer{
 
         0% {
@@ -353,6 +350,11 @@ p:hover{
     .landing{
         background: url(assets/imgs/landing-mobile.png) center center no-repeat !important;
         background-size:cover !important;
+    }
+
+    #ifmyvideo{
+        width: 80vw !important;
+         height: 40vh !important;
     }
 }
 
