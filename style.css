@@ -82,12 +82,10 @@ a:hover{
 
 .accentdot{
     color:var(--accent);
-    /* font-size: 50pt; */
 }
 
 .cta{
     margin-top:10px;
-    /* width:200px; */
     height:fit-content;
     padding:15px;
     color:var(--accent);
@@ -129,9 +127,6 @@ a:hover{
 }
 
 #btnLetsTalk{
-    /* position: absolute;
-    left:50%;
-    transform:translateX(-50%); */
     text-align: center;
 }
 
@@ -147,7 +142,6 @@ button{
 }
 
 button:focus{
-    /* border:none !important; */
     outline:none;
 }
 
@@ -166,11 +160,8 @@ button:focus{
     bottom:20px;
     right:20px;
     padding:15px 18px 15px 18px;
-    /* width:30px;
-    height:30px; */
     background: var(--light);
     color: var(--black);
-    /* visibility: hidden; */
     text-align: center;
     transition:all ease-in-out 1s;
     opacity:0.1;
@@ -189,6 +180,10 @@ button:focus{
     display:block !important;
 }
 
+.overflowhide{
+    overflow:hidden !important;
+}
+
 .contactmesection{
     position:absolute;
     left:50%;
@@ -202,15 +197,11 @@ h5{
     color:var(--light);
     font-family: 'Roboto', sans-serif;
     font-weight:200;
-    /* text-align:center; */
 }
 
 .separator{
-    /* position: relative; */
     width:100px;
     height:2px;
-    /* left:50%; */
-
 }
 
 .sociallinks{
@@ -219,10 +210,6 @@ h5{
     left:50%;
     transform:translateX(-50%);
     transition:all ease-in-out 0.5s;
-}
-
-.sociallinks:hover{
-    /* cursor: pointer !important; */
 }
 
 .sociallinks div{
@@ -244,8 +231,6 @@ p{
     font-size:10pt;
     text-align: center;
     color:var(--grey);
-    /* padding-top:13px;
-    padding-bottom:13px; */
     height:100% !important;
     line-height: 70px;
     transition:all ease-in-out 0.2s;
@@ -274,14 +259,29 @@ p:hover{
 
 .player{
     position:fixed;
-    /* display:none; */
-    /* transition:all ease-in-out 0.3s; */
     z-index: 80;
-    /* top:67px; */
     top:-100vh;
     display:none;
     animation: showplayer 2s ease backwards !important;
+    height:100vh;
+}
 
+.playercover{
+    position:fixed;
+    z-index: -5;
+    width:100vw;
+    opacity:0;
+    transition: all 1s ease-in-out;
+    height:100vh;
+    background: rgba(0,0,0,0.3);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.displaycover{
+    opacity:1 !important;
+    z-index:79 !important;
+    transition: all 1s ease-in-out;
 }
 
 .showplayeraction{
@@ -294,13 +294,9 @@ p:hover{
     display:hidden !important;
 }
 
-.overflowhide{
-    overflow:hidden !important;
-}
-
 .playerframe{
     width:100vw;
-    height:90vh;
+    height:65vh !important;
 }
 
 @keyframes showplayer{

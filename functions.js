@@ -21,17 +21,11 @@ $(document).ready(function(){
     });
 
     $("#btnPlayer").click(function(){
-        
-            // $(".player").toggleClass('showplayeraction');
-            // $.when(fetchPlayerStatus()).then(resetPlayerStatus);
 
             fetchPlayerStatus();
-            
-          
-            
 
             $("html,body").toggleClass('overflowhide');
-            
+            $(".playercover").toggleClass('displaycover');
             $("p").toggleClass('pforplay');
 
             if(!($(".header").hasClass('activeheader'))){
@@ -54,9 +48,6 @@ $(document).ready(function(){
         }
     };
 
-
-    // function resetPlayerStatus(){
-    // }
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
